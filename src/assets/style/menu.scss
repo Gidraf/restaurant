@@ -1,0 +1,230 @@
+@import "./variables";
+
+.intro-div {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  .menu-holder {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    .menu-item {
+      margin: 0 10px;
+      width: 100%;
+    .menu-category {
+      list-style: none;
+      width: 100%;
+      font-family: "Source Sans Pro" sans-serif;
+      font-weight: 100;
+      color: $color-white;
+      padding: .5rem;
+      border-radius: 5px;
+      background-color: $color-primary;
+  }
+
+  .show-choices {
+    animation: showchoices 1s infinite linear;
+    background: $color-secondary;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 10px;
+    border-bottom: 2px outset $color-primary;
+    border-radius: 5px;
+
+    .choice {
+      display: flex;
+      li {
+        width: 70%;
+        text-align: left;
+        margin-left: 10px;
+        padding: 1rem;
+        font-family: "Source Sans Pro" sans-serif;
+        font-weight: 500;
+      }
+    }
+
+    li {
+      list-style: none;
+    }
+    button {
+      background-color: $color-primary;
+      border: none;
+      height: 20px;
+      margin-top: 10px;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+
+  .choices {
+    height: 50vh;
+    overflow: scroll;
+    background: $color-secondary;
+    width: 100%;
+    margin: 0 10px;
+    border-bottom: 2px outset $color-primary;
+    border-radius: 5px;
+    li {
+      list-style: none;
+    }
+
+    .suggetions {
+      background-color: $color-white;
+      width: 90%;
+      margin: 0px auto;
+    }
+
+    .choice {
+      display: flex;
+      li {
+        width: 70%;
+        text-align: left;
+        margin-left: 10px;
+        padding: 1rem;
+        font-family: "Source Sans Pro" sans-serif;
+        font-weight: 500;
+      }
+      .active {
+        background-color: $color-white;
+      }
+
+      button {
+        background-color: $color-primary;
+        border: none;
+        height: 20px;
+        margin-top: 10px;
+        outline: none;
+        cursor: pointer;
+      }
+    }
+  }
+  @keyframes showchoices {
+    from {
+      height: 0
+    }
+    to {
+      height: 50vh;
+    }
+  }
+}
+}
+
+h1 {
+  font-family: "Source Sans Pro" sans-serif;
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+  .cover-image {
+    background-image:url('https://res.cloudinary.com/g-draf-inc/image/upload/v1564481864/background_image_bqfedy.png'), url(../images/restaurant.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    padding: 10rem;
+
+    h1 {
+      font-family: "Source Sans Pro" sans-serif;
+      color: $color-white;
+      font-weight: 700;
+      font-size: 5rem;
+    }
+
+    p{
+      color: $color-white;
+      font-size: 3rem;
+      font-family: "Source Sans Pro" sans-serif;
+      font-weight: 200;
+    }
+
+    button {
+      position: absolute;
+      bottom: 1px;
+      text-align: center;
+      margin: 10px auto;
+      background-color: $color-secondary;
+      border: 1px outset $color-accent;
+      border-radius: 5px;
+      width: 10rem;
+      cursor: pointer;
+      color: $color-white;
+      font-size: 1rem;
+      opacity: 0.8;
+
+      img {
+        width: 1rem;
+        transform: rotate(90deg);
+        animation: indicate 3s infinite linear;
+      }
+    }
+
+    button:hover {
+      opacity: 1;
+    }
+
+    @keyframes indicate {
+      from {
+        transform: scale(.5) rotate(90deg);
+      }
+      to {
+        transform: scale(1) rotate(90deg);
+      }
+    }
+  }
+
+
+  .show-menu {
+    height: 10%;
+    padding: .5rem;
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    p {
+      display: none;
+    }
+  }
+
+  .animate-menu {
+    animation: reducesize .5s infinite linear;
+
+    h1 {
+      animation: reducetextsize .5s infinite linear;
+    }
+
+    .fadetext {
+    animation: fadetext .5s infinite linear;
+    }
+  }
+
+  @keyframes reducesize {
+    from {
+      height: 100%;
+      padding: 10rem;
+    }
+    to {
+      height:10%;
+      padding: .5rem;
+    }
+  }
+
+  @keyframes reducetextsize {
+    from {
+      font-size: 5rem;
+    }
+    to {
+      font-size: 2rem;
+    }
+  }
+
+  @keyframes fadetext {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+}

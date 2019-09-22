@@ -1,0 +1,19 @@
+@import './variables.scss';
+
+nav {
+  background-color: $color-primary;
+  width: 100%;
+  padding: 1rem;
+  height: 2.5rem;
+
+  li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+    font-family: "Source Sans Pro" sans-serif;
+    font-weight: 700;
+    color: $color-white;
+    float: left;
+  }
+}

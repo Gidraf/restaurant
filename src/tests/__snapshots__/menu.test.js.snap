@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BlockModal Component renders properly 1`] = `undefined`;
+
+exports[`Menu Component renders properly 1`] = `ShallowWrapper {}`;
